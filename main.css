@@ -1,0 +1,180 @@
+/* Estilos generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffe4e9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+/* Contenedor principal */
+.content {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    border: 2px solid #f8bbd0;
+    transition: transform 0.3s ease;
+    overflow: hidden; /* Asegura que nada se desborde del contenedor */
+}
+
+/* Hover para el contenedor */
+.content:hover {
+    transform: translateY(-5px);
+}
+
+/* Título */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ec407a;
+    font-weight: 700;
+    word-wrap: break-word;
+}
+
+/* Contenedor para el texto con el efecto de escritura */
+.typewriter {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    word-wrap: break-word;
+}
+
+/* Estilo para el texto de la máquina de escribir */
+.typewriter p {
+    font-size: 1.6rem;
+    color: #e91e63;
+    font-weight: bold;
+    margin: 0;
+    display: inline-block;
+    animation: typing 4s steps(40, end), blink 0.7s step-end infinite alternate;
+    white-space: normal; /* Permite que el texto se ajuste al contenedor */
+    overflow-wrap: break-word; /* Asegura que las palabras largas se ajusten dentro del contenedor */
+}
+
+/* Animación para el efecto de máquina de escribir */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    from {
+        border-right: 2px solid #e91e63;
+    }
+    to {
+        border-right: 2px solid transparent;
+    }
+}
+
+/* Estilo para los botones */
+button {
+    font-size: 1.2rem;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin: 10px;
+    display: inline-block;
+    font-weight: bold;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Botón "Sí" */
+button.si {
+    background-color: #66bb6a;
+    color: white;
+}
+
+button.si:hover {
+    background-color: #43a047;
+    transform: scale(1.05);
+}
+
+/* Botón "No" */
+button.no {
+    background-color: #ef5350;
+    color: white;
+}
+
+button.no:hover {
+    background-color: #d32f2f;
+    transform: scale(1.05);
+}
+
+/* Alineación de los botones */
+#buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Estilo para el mensaje y la imagen después de presionar "Sí" */
+#result {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilo para el mensaje bonito */
+#result p {
+    font-size: 1.6rem;
+    color: #66bb6a;
+    font-weight: bold;
+}
+
+/* Efecto de imagen tierna */
+#cuteImage {
+    max-width: 200px;
+    margin-top: 20px;
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#cuteImage.visible {
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+/* Imagen de la pregunta con efecto */
+#mePerdonasImage {
+    max-width: 120px;
+    margin-top: 20px;
+    opacity: 0;
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+/* Caja de texto responsiva */
+@media (max-width: 768px) {
+    .content {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .typewriter p {
+        font-size: 1.2rem;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
